@@ -1,0 +1,178 @@
+/* ==== Fondo ==== */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #04030a;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ==== Contenido ==== */
+.sky {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+  font-family: 'Handlee', cursive;
+  max-width: 600px;
+}
+
+.animal-peeking {
+  margin-bottom: 20px;
+}
+
+.panda-image {
+  width: 500px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* ==== Mensajes ==== */
+.message-area {
+  background: rgba(255, 182, 193, 0.15);
+  border: 2px solid pink;
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+}
+
+.sign { margin: 15px 0; }
+.sign p {
+  font-size: 20px;
+  color: #ffd6e0;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ==== Inputs y botones ==== */
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid pink;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Handlee', cursive;
+  outline: none;
+  margin-top: 10px;
+}
+
+button {
+  background: pink;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255,105,180,0.6);
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: hotpink;
+}
+
+/* ==== Pantalla final ==== */
+.thanks-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==== Flor con mensaje ==== */
+.flower-container {
+  position: relative;
+  text-align: center;
+}
+
+.flower-img {
+  width: 600px;
+  max-width: 95vw;
+  animation: pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  from { transform: scale(0.95); }
+  to { transform: scale(1.05); }
+}
+
+.final-message {
+  position: absolute;
+  bottom: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 2px solid #FFD700;
+  max-width: 320px; /* aumentado para que entre más texto */
+  color: #fff;
+  font-family: 'Handlee', cursive;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px #000;
+  text-align: center;
+}
+
+/* ==== Efecto máquina de escribir ==== */
+.final-message p {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid gold;
+  white-space: pre-wrap;   /* ✅ permite saltos de línea */
+  word-wrap: break-word;   /* ✅ corta si es muy largo */
+  animation: typing 12s steps(120, end), blink .8s step-end infinite;
+  max-width: 100%;
+}
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 120ch; } /* Ajustar al número de caracteres de tu mensaje */
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: gold; }
+}
+
+/* ==== Corazones flotando ==== */
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  animation: floatUp 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+  .resaltado {
+    background-color: black;
+    font-weight: bold;
+    padding: 2px;
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensaje Especial</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Handlee&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fondo animado de estrellas -->
+  <canvas id="c"></canvas>
+
+  <!-- Contenedor principal -->
+  <div class="sky">
+    <div class="container">
+      <!-- Panda -->
+      <div class="animal-peeking">
+        <img id="pandaImg" src="img/panda_sospechoso.png" alt="Panda" class="panda-image">
+      </div>
+
+      <!-- Zona de mensajes -->
+      <div class="message-area">
+        <!-- Pregunta 1 -->
+        <div class="sign sign1">
+          <p id="message1">💖 ¿Quién es la persona más especial del mundo? 💖</p>
+        </div>
+
+        <!-- Nombre -->
+        <div class="sign sign2">
+          <p>✨ Ingresa su nombre:</p>
+          <input type="text" id="nameInput" autofocus>
+          <button id="submitName">Enviar</button>
+        </div>
+
+        <!-- Fecha -->
+        <div class="sign sign3" style="display: none;">
+          <p>💌 Casi me convences, pero falta una última prueba...</p>
+          <p>📅 Ingresa la fecha en que nos hicimos novios (DD/MM/AAAA):</p>
+          <input type="text" id="dateInput" placeholder="DD/MM/AAAA">
+          <button id="submitDate">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla final -->
+  <div class="thanks-screen" style="display: none;">
+    <div class="flower-container">
+      <img src="img/girasol_corazones.png" alt="Flor con corazones" class="flower-img">
+      <div class="final-message">
+  <h2>💛 Para ti 💛</h2>
+  <!-- le puse id para controlarlo desde JS -->
+  <p id="finalText">
+    No soy de recordar fechas ni de festejarlas,  
+    pero sé que para ti es diferente.  
+    Por eso quise hacerte este regalo a mi manera.  
+    💕 Te amo mucho, muchísimo, aunque no siempre lo diga 💕
+  </p>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Música romántica -->
+  <audio id="romanticSong" src="audio/musica.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
